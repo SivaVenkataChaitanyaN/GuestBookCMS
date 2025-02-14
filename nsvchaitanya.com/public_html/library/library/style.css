@@ -1,0 +1,425 @@
+/*
+@font-face {
+  font-family:'myPacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/library/fonts/Crimson_Text/CrimsonText-Bold.ttf");
+  	
+
+}*/
+html{
+	font-size:15px;
+	height:100%;
+}
+body{
+	margin:0px;
+	padding:0px;
+	background:rgb(245, 241, 235);
+	font-family:'myPacifico';
+}
+header{
+	position: fixed;
+    width: 100%;
+    height: 60px;
+	left:0px;
+	top:0px;
+	/*background:#fee8bf;*/
+	background:#AED581;
+}
+.form_style{
+	border:10px solid grey;
+	padding:10px;
+	font-size:17px;
+	font-family:serif;
+	/*background:#f6d28b;*/
+}
+.div_input_message{
+	float:right;
+	font-size:14px;
+	color:#775656;
+	font-family: Times New Roman;
+}
+[class^="span_"][class$="_error"]
+{
+    position:absolute;
+    top:28px;
+    right:4px;
+    display:none;
+    background:#BB5A4A;
+    color:white;
+    font-size:12px;
+    padding:2px 5px;
+}
+/*
+.div_mainHeading{
+	text-align:left;
+	color:lightblue;
+	//border-bottom:1px solid Black;
+	position:relative;
+}*/
+.div_menu{
+	margin:auto;
+	position:absolute;
+    left: 50%;
+	transform:translate(-50%, 0);
+}
+.div_hid_menu{
+	width:50px;
+	height:50px;
+	position:relative;
+	left:300px;
+	float:left;
+	display:none;
+	background:url("/library/images/menu.png");
+}
+.main_width{
+	margin:auto;
+	border:10px solid rgb(232, 217, 208);	
+	max-width:1000px;
+	padding:4px;
+	background:white;
+}
+.menu{
+	list-style-type:none;
+	display:inline-block;
+	background:#E57373;
+	/*background:rgb(70, 41, 23);*/
+	padding:0px;
+}
+@media screen and (max-width : 640px)
+{
+	.div_hid_menu{
+		display:block;
+		position:absolute;
+		top:-1px;
+		left:50%;
+		transform:translate(-50%, 0);
+	}
+	.menu{
+		display:none;
+		position:absolute;
+		left:3px;
+		top:34px;
+	}
+}
+.menu_on{
+	display:block;
+	position:absolute;
+	left:50%;
+	transform:translate(-65%, 0);
+	top:34px;
+	/* left:-16px; */
+	/* top:30px; */
+}
+.menu_off{
+	display:none;
+}
+li{
+	display:inline-block;
+	text-align:center;
+	padding:10px;
+}
+a{
+	color:white;
+}
+li:hover{
+	background:grey;
+}
+.div_list_holder{
+	background: white;
+}
+.div_holder{
+	position:relative;
+	padding:2px;
+}
+.sport_error
+{
+	position:absolute;
+    top:31px;
+    right:7px;
+    display:none;
+    background:#BB5A4A;
+    color:white;
+    font-size:12px;
+    padding:2px 5px;
+}
+@media screen and (max-width:640px)
+{
+	li{
+		display:block;
+		background:rgb(70, 41, 23);
+	}
+}
+.div_dummy{
+	height:110px;
+}
+	.div_pag_nav{
+		margin-top:20px;
+		margin-bottom:20px;
+		position:relative;
+		left: 50%;
+		transform:translate(-5%, 0);
+	}
+	.a_pag_nav{
+		color:red;
+		padding:5px;
+		margin:4px;
+		border:1px solid black;
+		background:white;
+		cursor:default;
+	}
+	
+/* END Page Nav at the bottom */
+.div_border_on{
+	/*border:1px solid lightblue;*/
+	margin:auto;
+	max-width:480px;
+	margin-top:20px;
+	padding:20px;
+	/*background:#B0BEC5;
+	background:#43a047;*/
+	background:skyblue;
+	display:block;
+	/* font-family:pacifico; */
+}
+.div_border_off{
+	display:none;
+}
+.show_hide_button{
+	position:relative;
+	left:50%;
+	transform:translate(-50%, 0);
+	top:-11px;
+	display:block;
+}
+.content{
+	padding:10px;
+	text-align:left;
+	/*background:rgb(247, 247, 247);*/
+	/*background:#FFEB3B;*/
+	background:moccasin;
+}
+.div_login{
+	position:relative;
+	left:75%;
+	top:0px;
+	width:50px;
+	height:50px;
+	background:url("/library/images/sign-up.png");
+}
+.div_signup{
+	display:none;
+}
+.div_signup_on{
+	position:relative;
+	left:-10%;
+	float:right;
+	background:white;
+	width:231px;
+	height:202px;
+}
+.div_signup_off{
+	display:none;
+}
+.input_style{
+	width:330px;
+	height:25px;
+	padding:10px;
+}
+.div_space{
+	margin:5px;
+}
+.radio_element{
+	margin:5px;
+	background:white;
+}
+.div_background{
+	/*background:rgb(247, 247, 247);*/
+	background:pink;
+	position:relative;
+	left:50%;
+	transform:translate(-44%, 0);
+	max-width:400px;
+}
+.footer{
+	margin-top:10px;
+	background:#AED581;
+	height:10%;
+}
+.profile_on{
+	border:3px solid blue;
+	width:100px;
+	height:100px;
+	position:absolute;
+	left:386px;
+	display:block;
+}
+
+.displayProfile{
+	display:none;
+}
+.profile_on{
+	border:3px solid blue;
+	width:100px;
+	height:100px;
+	position:absolute;
+	left:386px;
+	display:block;
+}
+table{
+	border:4px solid black;
+	border-collapse:collapse;
+	position:relative;
+	left:50%;
+	transform:translate(-50%, 0);
+	margin-bottom:40px;
+	cursor:default;
+}
+th, td{
+	border: 4px solid black;
+	padding:10px;
+}
+select{
+	width:350px;
+	height:20px;
+}
+.span_books_error{
+	position:absolute;
+    top:23px;
+    right:6px;
+    display:none;
+    background:#BB5A4A;
+    color:white;
+    font-size:12px;
+    font-family:Montserrat;
+    padding:2px 5px;
+}
+.div_position_error{
+	position:relative;
+}
+.img_delete{
+	float:right;
+	background:url("/images/delete.jpg");
+	width:25px;
+	height:25px;
+}
+.img_edit{
+	float:right;
+	margin-right:7px;
+	content:url("/images/EditButton.png");
+	width:15px;
+	height:15px;
+}
+.textarea_dim{
+	width:350px;
+	height:98px;
+}
+.a_signup{
+	color:black;
+	float:right;
+}
+.div_left_float{
+	float:left;
+	height:600px;
+	overflow:auto;
+}
+.div_eventName{
+	background:white;
+	min-height:20px;
+	padding:15px;
+	color:black;
+	display:block;
+	text-align:center;
+}
+.div_right_float{
+	float:right;
+	max-width:480px;
+}
+.div_clear{
+	clear:both;
+}
+
+.favouriteSubject{
+	width:60px;
+	border:0px;
+	background:inherit;
+}
+
+.favouriteSport{
+	width:60px;
+	border:0px;
+	background:inherit;
+}
+.hobbies{
+	width:200px;
+	border:0px;
+	background:inherit;
+}
+.nameOfBooks{
+	width:465px;
+	height:31px;
+	border:0px;
+	background:inherit;
+}
+.div_banner {
+    position:relative;
+	height:100vh;
+	max-width:100vw;
+    max-height:100vh;
+    clear:both;
+    overflow:hidden;
+}
+
+.img_banner {
+	position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+	height:auto;
+    width:100vw;
+	animation:ZoomEffect 5s ease-in-out infinite;
+}
+.icon_asc{
+	width:10px;
+	height:6px;
+	position: relative;
+    left: 5px;
+    top: -5px;
+	visibility: hidden;
+}
+
+#server{
+	margin:5px;
+}
+#client{
+	margin:5px;
+}
+
+@keyframes ZoomEffect {
+	0% {
+		transform: scale(1.1) translate(-50%,-50%);
+	}
+	50% {
+		transform: scale(1) translate(-50%,-50%);
+	}
+	100% {
+		transform: scale(1.1) translate(-50%,-50%);
+	}
+}
+@keyFrames clickEffect {
+	from {
+		opacity:0.1;
+	}
+	to {
+		opacity:1;
+	}
+}
+.updateButton{
+	float:right;
+}
+.hobbies{
+	float:left;
+}
+.hiddenDivForButton{
+	clear:both;
+}

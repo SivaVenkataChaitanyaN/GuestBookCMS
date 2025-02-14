@@ -1,0 +1,29 @@
+ while(s[i] != '\0')
+    {
+        if(s[i] == ' ')
+        {
+            for(int j = start;j < i;j++)
+            {
+                printf("%c", s[j]); 
+            }
+            printf("\n");
+            start = i+1;
+        }
+        i++;
+    }
+    for(;start < i;start++)
+    {
+        printf("%c", s[start]);
+    }
+	
+	
+	
+	int arrCount[10];
+    char *s = (char*)malloc(1024*sizeof(char));
+    s = realloc(s, strlen(s)+1);
+    printf("%s", s); 
+	
+	
+	s = malloc(1024 * sizeof(char));
+    gets(s);
+    s = realloc(s, strlen(s) + 1);

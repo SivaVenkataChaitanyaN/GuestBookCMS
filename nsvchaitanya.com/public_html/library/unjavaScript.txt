@@ -1,0 +1,156 @@
+/*
+		var nameElement0 = document.getElementById("eventToDisplay0");
+		var nameElement1 = document.getElementById("eventToDisplay1");
+		var nameElement2 = document.getElementById("eventToDisplay2");
+		var nameElement3 = document.getElementById("eventToDisplay3");
+		var displayElement0 = document.getElementById("displayProfile0");
+		var displayElement1 = document.getElementById("displayProfile1");
+		var displayElement2 = document.getElementById("displayProfile2");
+		var displayElement3 = document.getElementById("displayProfile3");
+		nameElement0.addEventListener("click", profilePic0());
+		nameElement1.addEventListener("click", profilePic1());
+		nameElement2.addEventListener("click", profilePic2());
+		nameElement3.addEventListener("click", profilePic3());
+		
+		function profilePic0()
+		{
+			if(displayElement0.style.display == "none")
+			{
+				displayElement0.style.display = "block";
+			}
+			else if(displayElement0.style.display == "block")
+			{
+				displayElement0.style.display = "none";
+			}
+		}
+		
+		function profilePic1()
+		{
+			if(displayElement1.style.display == "none")
+			{
+				displayElement1.style.display = "block";
+			}
+			else if(displayElement1.style.display == "block")
+			{
+				displayElement1.style.display = "none";
+			}
+		}
+		function profilePic2()
+		{
+			if(displayElement2.style.display == "none")
+			{
+				displayElement2.style.display = "block";
+			}
+			else if(displayElement2.style.display == "block")
+			{
+				displayElement2.style.display = "none";
+			}
+		}
+		function profilePic3()
+		{
+			if(displayElement3.style.display == "none")
+			{
+				displayElement3.style.display = "block";
+			}
+			else if(displayElement3.style.display == "block")
+			{
+				displayElement3.style.display = "none";
+			}
+		}*/
+
+
+
+
+
+
+
+
+
+/*
+		buttonElement = document.getElementById("btn");
+		
+		buttonElement.addEventListener("click", createUrl);
+		/*
+			Adding event listener to button element and it is fired on click and function createUrl is called
+		*/
+		var url;
+		
+		var formElement = document.getElementById("form");
+		
+		function createUrl()
+		{
+			var page = "submit";
+			
+			url = "";
+			
+			for(var i = 0; i < document.forms[0].elements.length-1; i++)
+			{
+				if(formElement.elements[i].name == "due")
+				{
+					if(document.getElementById("checkValue").checked)
+					{
+						url += formElement.elements[i].name;
+					
+						url += ":";
+					
+						url += formElement.elements[i].value.trim();
+					
+						url += ",";
+						
+					}
+				}
+				else if(formElement.elements[i].name == "sport")
+				{
+					if(formElement.elements[i].checked)
+					{
+						url += formElement.elements[i].name;
+					
+						url += ":";
+					
+						url += formElement.elements[i].value.trim();
+					
+						url += ",";
+					}
+				}
+				else if(formElement.elements[i].name == "hobbies[]")
+				{
+					url += formElement.elements[i].name;
+					
+					url += ":";
+					
+					for (var j=0; j<7; j++)
+					{ 
+						if (formElement.elements[i].options[j].selected)
+						{
+							url += formElement.elements[i].options[j].value;
+							
+							url += ";";
+						} 
+					}
+					
+					url = url.slice(0, -1);
+					
+					url += ",";
+				}
+				else
+				{
+					url += formElement.elements[i].name;
+			
+					url += ":";
+					
+					url += formElement.elements[i].value.trim();
+
+					url += ",";
+				}
+			}
+			console.log(url);
+			
+			$.ajax({
+					data :	{url},
+					type: "POST",
+					success : function(response) {
+					console.log(response);
+				}
+			});
+		}
+		*/

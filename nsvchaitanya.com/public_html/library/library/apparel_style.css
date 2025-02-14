@@ -1,0 +1,33 @@
+.header{
+	display:block;
+}
+.list{
+	list-style-type:none;
+	width:100%;
+	margin:auto;
+}
+li{
+	border:1px solid white;
+	display:inline;
+	text-align:center;
+	padding-left:50px;
+	padding-right:50px;
+	padding-top:10px;
+	padding-bottom:10px;
+	color:white;
+	background:green;
+}
+li:hover{
+	background:black;
+}
+.div_left{
+	float:left;
+	width:100px;
+}
+.div_right{
+	float:right;
+	width:100px;
+}
+.div_center{
+	width:100%;
+}

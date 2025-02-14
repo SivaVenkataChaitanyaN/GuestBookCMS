@@ -1,0 +1,49 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<table>
+				<tr>
+					<td>
+						<label>
+							Name
+						</label>
+					</td>
+					<td>
+						<input type="text" name="nameOfStudent" id="name" style="color:grey" value="Enter your name" onclick="remvalue();" onblur="checkValue();">
+					</td>
+				</tr>
+		</form>
+		<script>
+			$c = {}
+			
+			var nameEle = document.getElementById("name");
+			
+			function remvalue()
+			{
+				
+ 				if(nameEle.value == 'Enter your name')
+				{
+					nameEle.value = '';
+				}
+				nameEle.style.color = 'black';
+			}
+			function checkValue()
+			{
+				if(nameEle.value == '')
+				{
+					nameEle.value = 'Enter your name';
+					nameEle.style.color = 'grey';
+				}
+				
+ 				if(nameEle.value == 'Enter your name' || nameEle.value == 'enter your name')
+				{
+					nameEle.style.color = 'grey';
+					nameEle.value = 'Enter your name';
+				}
+			}
+		</script>
+	</body>
+</html>

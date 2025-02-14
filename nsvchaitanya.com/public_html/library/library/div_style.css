@@ -1,0 +1,42 @@
+.div_left{
+	background:blue;
+	float:left;
+	width:100px;
+	padding:20px;
+}
+.div_right{
+	background:blue;
+	float:right;
+	width:100px;
+	padding:20px;
+}
+.div_center{
+	background:orange;
+	width:100%;
+	padding:50px;
+}
+/*
+@media screen and (max-width:1000px){
+	.div_left{
+		visibility:hidden !important;
+	}
+}
+
+@media screen and (max-width:640px){
+	.div_left{
+		visibility:hidden !important;
+		
+	}
+	.div_center{
+		display:block !important;
+		float:left	 !important;
+	}
+	.div_right{
+		float:none	!important;
+	}
+}*/
+.footer{
+	background:lightblue;
+	height:10%;
+	display:block;
+}

@@ -1,0 +1,8 @@
+DirectoryIndex learn.php 
+
+RewriteEngine off
+
+RewriteCond %{REQUEST_URI} !\.(css|png|jpg|jpeg|ttf)$ 
+RewriteRule .* index.php [L]
+#ErrorDocument 404     /xml.php
+#ErrorDocument 500     /500.html

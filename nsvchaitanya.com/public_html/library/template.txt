@@ -1,0 +1,26 @@
+Template
+Script
+View
+
+	Head
+		Links		CSS external, favicon
+		Meta
+		Keywords
+		Description
+		Title
+		Style		inline css
+		Script
+			script 	inline 
+			src 	external 
+		
+	Body
+		Header
+			Menu
+		body content	
+		
+		
+		Footer
+			Script
+				script 	inline 
+				src 	external 
+			

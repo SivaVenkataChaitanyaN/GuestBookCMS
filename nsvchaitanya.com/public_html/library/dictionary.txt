@@ -1,0 +1,32 @@
+dictionary 
+	
+	word 
+	
+		a sequence of letters terminated by space 
+		having a defined meaning 
+		
+		definition is dependent on language 
+		
+			we find some words only in some languages 
+		
+	list of words 			dictionary/sabdhakosamu 
+	meanings 				nighantuvu 	
+	synonyms 			 	dictionary of synonyms (thesaurus) 
+	
+		Word 
+		
+			meaning 
+				
+				usage 
+				
+					image 
+					animation
+					video 
+					------
+					story 
+					poem
+					song 
+					
+		set 64 different meanings 
+		
+		multi language 

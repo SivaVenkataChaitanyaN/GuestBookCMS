@@ -1,0 +1,3049 @@
+<!--
+		<div class="div_login" id="div_login">
+		</div>
+			<div class="div_signup" id="div_signup">
+				<form action="/library/submit" class="form_signup" method="post">
+					<table>
+						<tr>
+							<td>
+								<input name="name" type="text" placeholder="Name:" style="background:rgb(247, 247, 247);"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input name="email" type="text" placeholder="Email:" style="background:rgb(247, 247, 247);"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input name="password" type="password" placeholder="Password:" style="background:rgb(247, 247, 247);"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button type="submit">
+									Submit
+								</button>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>-->
+
+
+
+
+
+
+
+<!--
+							<tr>
+								<td>
+									<label>
+										Number Of Books Taken
+									</label>
+								<td>-->';
+		/*
+			switch($books)
+		{
+			case 1:
+			{
+				$output .= '
+					<input name = "booksTaken" value="1" type="radio" checked>
+						1
+					</input>
+					<input name = "booksTaken" value="2" type="radio">
+						2
+					</input>
+					<input name = "booksTaken" value="3" type="radio">
+						3
+					</input>';
+				break;
+			}
+			case 2:
+			{
+				$output .= '
+					<input name = "booksTaken" value="1" type="radio">
+						1
+					</input>
+					<input name = "booksTaken" value="2" type="radio" checked>
+						2
+					</input>
+					<input name = "booksTaken" value="3" type="radio">
+						3
+					</input>';
+					break;
+			}
+			case 3:
+			{
+				$output .= '
+					<input name = "booksTaken" value="1" type="radio">
+						1
+					</input>
+					<input name = "booksTaken" value="2" type="radio">
+						2
+					</input>
+					<input name = "booksTaken" value="3" type="radio" checked>
+						3
+					</input>';
+					break;
+			}
+		}	*/				
+					$output .=
+						'<!--</td>
+							</tr>-->
+
+
+
+<div>
+							Name
+						</div>
+						<div>
+							<input name="'.$input[1]['name']['name'].'" value="' . $name .'" type="'.$input[1]['name']['type'].'" class="'.$input['class'].'"/>
+						</div>
+						<div>
+							Email-id
+						</div>
+						<div>
+							<input name="'.$input[1]['email-id']['name'].'" value="' . $email .'" type="'.$input[1]['email-id']['type'].'" class="'.$input['class'].'"/>
+						</div>
+						<div>
+							Password
+						</div>
+						<div>
+							<input name="'.$input[1]['password']['name'].'" type="'.$input[1]['password']['type'].'" class="'.$input['class'].'"/>
+						</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$output ='
+				<div class="div_background">
+					<form action="'.$form['signup']['action'].'" method="'.$form['signup']['method'].'" class="'.$form['signup']['class'].'" id="'.$form['signup']['id'].'">
+						<div>
+							Name
+						</div>
+						<div>
+							<input name="'.$input[1]['name']['name'].'" value="' . $name .'" type="'.$input[1]['name']['type'].'" class="'.$input['class'].'"/>
+						</div>
+						<div>
+							Email-id
+						</div>
+						<div>
+							<input name="'.$input[1]['email-id']['name'].'" value="' . $email .'" type="'.$input[1]['email-id']['type'].'" class="'.$input['class'].'"/>
+						</div>
+						<div>
+							Password
+						</div>
+						<div>
+							<input name="'.$input[1]['password']['name'].'" type="'.$input[1]['password']['type'].'" class="'.$input['class'].'"/>
+						</div>
+						<div>
+							<button type="'.$input[0]['button']['type'].'" name="'.$input[0]['button']['name'][3].'">
+								'.$input[0]['button']['innerHtml'][3].'
+							</button>
+						</div>
+					</form>
+				</div>';
+				
+		return $output;
+
+
+$input = array(
+		'class'=>'input_style',
+		0=>array(
+			'user'=>array(
+				'name'=>'user',
+				'type'=>'text',
+				'placeholder'=>'User-id:'
+			),
+			'age'=>array(
+				'name'=>'age',
+				'type'=>'number',
+				'placeholder'=>'Age:'
+			),
+			'due'=>array(
+				'name'=>'due',
+				'type'=>'checkbox',
+				'id'=>'checkValue'
+			),
+			'select'=>array(
+				'name'=>'favouriteSubject',
+			),
+			'sport'=>array(
+				'name'=>'sport',
+				'type'=>'radio'
+			),
+			'hobbies'=>array(
+				'name'=>'hobbies[]',
+				'option'=>array(
+					'innerHtml'=>array(
+						0=>'--SELECT--',
+						1=>'Playing',
+						2=>'Reading',
+						3=>'Listening to Music',
+						4=>'Watching Movies',
+						5=>'Trekking',
+						6=>'Hiking'
+					)
+				)
+			),
+			'textarea'=>array(
+				'name' => 'booksTakenName',
+				'class'=> 'textarea_dim'
+			),
+			'button'=>array(
+				'type'=>'submit',
+				'name'=>array(
+					1=>'update',
+					2=>'delete',
+					3=>'submit'
+				),
+				'innerHtml'=>array(
+					1=>'update',
+					2=>'delete',
+					3=>'submit'
+				),
+				'id'=>array(
+					1=>'btn1',
+					2=>'btn2'
+				)
+			)
+		),
+		1=>array(
+			'Name'=>array(
+				'name'=>'name',
+				'type'=>'text'
+			),
+			'Email-id'=>array(
+				'name'=>'email-id',
+				'type'=>'text'
+			),
+			'Password'=>array(
+				'name'=>'password',
+				'type'=>'password'
+			)
+		)
+	);
+	
+	$form = array(
+		'insert'=>array(
+			'action'=>'/library/submit',
+			'class'=>'form_style',
+			'method'=>'post',
+			'id'=>'form'
+		),
+		'edit'=>array(
+			'action'=>'/library/submit',
+			'class'=>'form_style',
+			'method'=>'post',
+			'id'=>'form'
+		),
+		'signin'=>array(
+			'action'=>'/library/users/process',
+			'class'=>'form_style',
+			'method'=>'post',
+			'id'=>'form'
+		),
+		'signup'=>array(
+			'action'=>'/library/users/manage/edit',
+			'class'=>'form_style',
+			'method'=>'post'
+		),
+		'editUser'=>array(
+			'action'=>'/library/users/manage/edit?id=',
+			'class'=>'form_style',
+			'method'=>'post'
+		)
+	);
+
+
+
+
+
+
+
+
+
+	MaxNumOfLinks = 5
+	
+	numOfLinks = ceil(numOfRecords/ItemsPerPage)
+	
+	MaxNumLinks = numOfLinks > MaxNumLinks ? MaxNumLinks : numOfLinks
+	
+	FirstPage = curPage - round(MaxNumLinks/2);
+	
+	LastPage = curPage + round(MaxNumLinks/2);
+	
+	startAt = FirstPage ;
+	
+	while(startAt < LastPage)
+	{
+		pourLink startAt
+		
+		startAt++;
+	}	
+	
+	if(firstPage > 1)
+	
+		pourLink = firstPageLink + pourLink;
+		
+		
+	if(LastPage < MaxNumLinks)
+	
+		pourLink += lastPageLink;
+		
+		
+
+
+
+for(var i = 0; i < document.forms[1].elements.length-1; i++)
+			{
+				if(formElement.elements[i].name == "due")
+				{
+					if(document.getElementById("checkValue").checked)
+					{
+						url += formElement.elements[i].name;
+					
+						url += "=";
+					
+						url += formElement.elements[i].value.trim();
+					
+						url += "&";
+					}
+				}
+				else
+				{
+					url += formElement.elements[i].name;
+					
+					url += "=";
+					
+					url += formElement.elements[i].value.trim();
+					
+					url += "&";
+				}
+			}
+			
+			url = url.slice(0, -1);
+			
+			console.log(url);
+			
+			var cat = new XMLHttpRequest();
+			
+			cat.open("POST", page, true);
+			/*
+				Sending data through post variable
+			*/
+			cat.setRequestHeader("JSREQ", "1");
+			/*
+				Creating a element in server with JSREQ AS key and 1 as value
+			*/
+			cat.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			
+			cat.onreadystatechange = function () {
+						if(cat.readyState == 4)
+							console.log(formElement.innerHTML = cat.responseText);
+			};
+			
+			
+			cat.send(url);
+				
+	
+	
+
+if(formElement.elements[i].name == "due")
+				{
+					if(document.getElementById("checkValue").checked)
+					{
+						url += formElement.elements[i].name;
+					
+						url += ":";
+					
+						url += formElement.elements[i].value.trim();
+					
+						url += ",";
+						
+					}
+				}
+				else if(formElement.elements[i].name == "sport")
+				{
+					if(formElement.elements[i].checked)
+					{
+						url += formElement.elements[i].name;
+					
+						url += ":";
+					
+						url += formElement.elements[i].value.trim();
+					
+						url += ",";
+					}
+				}
+				else if(formElement.elements[i].name == "hobbies[]")
+				{
+					url += formElement.elements[i].name;
+					
+					url += ":";
+					
+					for (var j=0; j<7; j++)
+					{ 
+						if (formElement.elements[i].options[j].selected)
+						{
+							url += formElement.elements[i].options[j].value;
+							
+							url += ";";
+						} 
+					}
+					
+					url = url.slice(0, -1);
+					
+					url += ",";
+				}
+				else
+				{
+					url += formElement.elements[i].name;
+			
+					url += ":";
+					
+					url += formElement.elements[i].value.trim();
+
+					url += ",";
+				}
+	
+
+
+for(var i = 0; i < document.forms[0].elements.length-1; i++)
+			{
+				if(formElement.elements[i].name == "due")
+				{
+					if(document.getElementById("checkValue").checked)
+					{
+						key[i] = formElement.elements[i].name;
+					
+						data[i] = formElement.elements[i].value.trim();
+						
+					}
+				}
+				else if(formElement.elements[i].name == "sport")
+				{
+					if(formElement.elements[i].checked)
+					{
+						key[i] = formElement.elements[i].name;
+					
+						data[i] = formElement.elements[i].value.trim();
+					}
+				}
+				else if(formElement.elements[i].name == "hobbies[]")
+				{
+					key[i] = formElement.elements[i].name;
+					
+					for (var j=0; j<7; j++)
+					{ 
+						if (formElement.elements[i].options[j].selected)
+						{
+							data[i][j-1] = formElement.elements[i].options[j].value;
+						} 
+					}
+					
+				}
+				else
+				{
+					key[i] = formElement.elements[i].name;
+			
+					data[i] = formElement.elements[i].value.trim();
+				}
+			}
+			
+
+
+
+<!--<div class="displayProfile" id="displayProfile'.$i.'"></div>id="eventToDisplay'.$i.'"-->
+
+
+var jqObj = $("#main_width");
+		var dId = document.getElementById("main_width");
+		var jqResult = new Array();
+		var dResult = new Array();
+		var t = new Array();
+		for(var key in jqObj)
+		{
+			jqResult.push(key);
+		}
+		for(var key in dId)
+		{
+			dResult.push(key);
+		}
+		console.log(jqResult);
+		console.log(dResult);
+		for(var i = 0; i < jqResult.length;i++)
+		{
+			if(dResult.includes(jqResult[i]))
+			{
+				t.push(jqResult[i]);
+			}
+		}
+		console.log(t);
+
+
+var curElement = $(this);
+						
+						if(prevEvent != curEvent)
+						{
+							$(":button")
+								.off(prevEvent);
+							
+							if(prevElement != "")
+							{
+								prevElement.removeAttr("style");
+							}
+							
+							$(":button")
+								.on(curEvent, function(){
+								
+									$(this)
+										.siblings(".content")
+										.slideToggle(600);
+									
+								});
+							
+							prevEvent = curEvent;
+							
+							prevElement = curElement;
+						}
+
+
+
+
+
+
+
+
+<?php
+	include rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/library/includes/functions/display-functions.php';
+	
+	$dAction = 'del';
+	
+	$eAction = 'edit';
+	
+	$db = new mysqli('127.0.0.1', 'chaitanya', 'Chaitanya', 'chaitanya_useraccounts');
+	
+	$numPerPage = 4;
+	
+	$query = '
+		SELECT DISTINCT 
+			num_id 
+		FROM 
+			chaitanya_useraccounts.books
+		';
+	
+	$result = mysqli_query($p->dbToken, $query);
+	//$result = $db->query($p->dbToken, $query);
+	
+	if(!$result)
+	{
+		$errTxt = mysqli_error($p->dbToken);	
+		
+		print_r($errTxt);
+		
+		error_submission($query, $p->dbToken, __LINE__, __FILE__);
+	}
+	else
+	{
+		// $row = mysqli_fetch_assoc($result);
+		
+		$numberOfRecords = mysqli_num_rows($result);
+		
+		// $numberOfRecords = $row['numberOfRecords'];
+		
+		$numberOfPages = ceil($numberOfRecords/$numPerPage);
+	}
+	
+	$startAt = $numPerPage * ($currentPage - 1);
+	
+	$query = "
+		SELECT 
+			users.name,
+			books.nameOfBooks,
+			books.favouriteSubject,
+			books.favouriteSport,
+			books.hobbies,
+			books.id,
+			subjects.subjectName
+		FROM 
+			chaitanya_useraccounts.books
+		LEFT JOIN
+			users
+		ON
+			books.user = users.id
+		JOIN
+			subjects
+		ON
+			books.favouriteSubject = subjects.id
+		WHERE
+			books.id in (SELECT DISTINCT num_id FROM chaitanya_useraccounts.books)
+		ORDER BY
+			books.nameOfBooks ASC
+		LIMIT
+			{$startAt}, 4	
+	";
+	
+	$result = mysqli_query($p->dbToken, $query);
+	
+	
+	if(!$result)
+	{
+		$errTxt = mysqli_error($p->dbToken);	
+		
+		print_r($errTxt);
+		
+		error_submission($query, $p->dbToken, __LINE__, __FILE__);
+	}
+	else
+	{
+	}
+
+	if($result)
+	{
+		$num_rows = mysqli_num_rows($result);
+		
+		if($num_rows > 0)
+		{
+			$i = 0;
+			while($row = mysqli_fetch_assoc($result))
+			{
+				$p->output .= 
+				'
+					<div class="' .$p->bord_con_class['class']. '">
+					
+						<div >
+							' . $row['name'];
+				$p->output	.= '</div>';	
+						if(isset($_SESSION['user']))
+						{	
+							$p->output .= '<div>
+								<a href="'.$p->edit_nav_page['href'].'/'.$row['id'].'">
+									<img class="'.$p->edit_img['class'].'"/>
+								</a>
+							</div>';
+						}
+					$p->output .= '
+					<button name="toggle" type="button">Show/Hide</button> 
+					<div>
+						FavouriteSubject :	'.$row['subjectName'].'
+						<div style="float:right;">
+							FavouriteSport : '.$row['favouriteSport'].'
+						</div>
+					</div>';
+					/*
+						If the user login he can see edit button and delete button
+					*/
+					$p->output .= '
+						<p class="'.$p->content['class'].'">
+						' . $row['nameOfBooks'] . '
+						</p>
+						Hobbies : ' . $row['hobbies'] . '
+				</div>';
+				$i++;
+			}
+		}
+	}
+	
+	/*
+		It displays the details the player
+	*/
+	
+	$p->title = 'Guest Book Comments';
+	
+	$p->output .= '<div class="'.$p->pag_nav_class['class'].'">';
+	
+	$numlinks = 4;
+	
+	$p->output .= page_nav($numlinks, $currentPage, $numberOfPages);
+	
+	$p->output .= '</div></main>';
+	
+	$p->bodyScripts[]['code'] = '
+		var menuElement = document.getElementById("menu");
+		
+		var divHiddenElement = document.getElementById("div_hid_menu");
+		
+		divHiddenElement.addEventListener("click", menuToggle, true);
+		/*
+			Click event is added to that element and menuToggle is called when clicked
+		*/
+		function menuToggle()
+		{
+			if(menuElement.className == "menu_off" || menuElement.className == "menu")
+			{
+				menuElement.className = "menu_on";
+			}
+			else
+			{
+				menuElement.className = "menu_off";
+			}
+		}
+		/*
+			menu_off has display : none so that menu is invisible and now if menu_on is the class menu is visible
+		*/
+
+		$(":button").addClass("show_hide_button");
+		/*
+		$(":button").on("click", function(){
+			
+				var sibDiv = $(this).siblings("div");
+				
+				var curState = $(sibDiv).css("display");
+				
+				if(curState == "block")
+				{
+					$(sibDiv).hide();
+					//.toggleClass("div_border_off");
+				}
+				else
+				{
+					$(sibDiv).show();
+				}
+			});
+			*/
+		
+		$(":button").each(function(){$(this).on("click", function(){$(this).siblings(".content").slideToggle(600);})});
+		/*
+			Adds click event listener and on one click on button div_border slide up and on dbl click on 
+		*/
+	';	
+?>
+
+
+
+
+
+
+
+
+
+<!--
+							<tr>
+								<td>
+									<label>
+										Number Of Books Taken
+									</label>
+								<td>-->';
+		/*
+			switch($books)
+		{
+			case 1:
+			{
+				$output .= '
+					<input name = "booksTaken" value="1" type="radio" checked>
+						1
+					</input>
+					<input name = "booksTaken" value="2" type="radio">
+						2
+					</input>
+					<input name = "booksTaken" value="3" type="radio">
+						3
+					</input>';
+				break;
+			}
+			case 2:
+			{
+				$output .= '
+					<input name = "booksTaken" value="1" type="radio">
+						1
+					</input>
+					<input name = "booksTaken" value="2" type="radio" checked>
+						2
+					</input>
+					<input name = "booksTaken" value="3" type="radio">
+						3
+					</input>';
+					break;
+			}
+			case 3:
+			{
+				$output .= '
+					<input name = "booksTaken" value="1" type="radio">
+						1
+					</input>
+					<input name = "booksTaken" value="2" type="radio">
+						2
+					</input>
+					<input name = "booksTaken" value="3" type="radio" checked>
+						3
+					</input>';
+					break;
+			}
+		}	*/				
+					$output .=
+						'<!--</td>
+							</tr>-->
+
+
+<div class="radio_element">
+							<fieldset>
+								<legend>
+									Choose favouriteSport
+								</legend>
+								<div class="div_list_holder">
+									<input name="sport" value="1" type="radio">
+									<label for="cricket">Cricket </label><br>
+								
+									<input name="sport" value="2" type="radio">
+									<label for="Football">Football</label><br>
+									
+									<input name="sport" value="3" type="radio">
+									<label for="Hockey">Hockey</label>
+								</div>
+							</fieldset>
+						</div>
+
+
+
+
+
+//move_uploaded_file($_FILES[$key]['name'], $fileNewPath);
+				
+				$img_info = getimagesize($fileNewPath);
+				
+				//print_r($img_info);
+				
+				 $resourcePointer = imagecreatefromstring($fileContent);
+				
+				//$resourcePointer = imagecreatefrompng($fileNewPath);
+				
+				 $base64DecodedData = base64_encode($fileContent);
+				//echo '<textarea>' . $base64DecodedData . '</textarea>';exit;
+				// ob_start();
+				
+				//header('Content-Type: '.$img_info['mime']);
+				
+				//imagepng($resourcePointer);
+				//echo $fileContent;
+				// echo '<textarea>'.ob_get_clean().'</textarea>';
+				
+				//exit;
+				 $p->output .= 
+				 '
+					 <img src="data:'.$img_info['mime'].';base64,'.$base64DecodedData.'"/>
+				 ';
+
+
+
+
+.clipPath{
+				padding:10px;
+				margin:10px;
+				border:1px solid black;
+				font-family:sans-serif
+			}
+			.spanGlobal{
+				font-family:inherit;
+			}
+
+<div class="clipPath">
+				<span class="spanGlobal">
+					HII THERE
+				</span>
+			</div> 
+				
+
+/*
+	$curUrl = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+	
+	if(preg_match('/\/wedding\//', $curUrl))
+	{
+		$fileName = preg_replace('/http:\/\/anilhyma.com\/wedding\//', '', $curUrl);
+		
+		if($fileName == '')
+		{
+			$fileName = 'index.html';
+		}
+	
+		$fileName = preg_replace('/\/$/', '-index.html', $fileName);
+		
+		$fileName = preg_replace('/\//', '-', $fileName);
+		
+		$includeFilePath = $_SERVER['DOCUMENT_ROOT'].'/wedding/includes/'.$fileName;
+		
+		if(file_exists($includeFilePath))
+		{
+			include $includeFilePath;
+		}
+		else
+		{
+			include '404.php';
+		}
+	}
+	else
+	{
+		$newUrl = preg_replace('/http:\/\/anilhyma.com\//', 'http://anilhyma.com/wedding/', $curUrl);
+		
+		header('Location: '.$newUrl);
+	}*/
+
+
+/*
+	$validUrls = 
+"http://anilhyma.com/
+http://anilhyma.com/xmlrpc.php
+http://anilhyma.com/guest-book/
+";
+
+	$validUrl = explode("\n", $validUrls);
+	
+	foreach($validUrl as $curUrl)
+	{
+		$curUrl = substr($curUrl, 0, -1);
+		
+		if(!(preg_match('/http:\/\/anilhyma.com/', $curUrl)))
+		{
+			continue;
+		}
+		else
+		{
+			if(preg_match('/\/wedding\//', $curUrl))
+			{
+				$newUrl = $curUrl;
+			}
+			else
+			{
+				$newUrl = preg_replace('/http:\/\/anilhyma.com\//', 'http://anilhyma.com/wedding/', $curUrl);
+			}
+			$fileName = preg_replace('/http:\/\/anilhyma.com\/wedding\//', '', $newUrl);
+			
+			if($fileName == '')
+			{
+				$fileName = 'index.html';
+			}
+			
+			$filePath = $fileName;
+			
+			$fileName = preg_replace('/\/$/', '-index.html', $fileName);
+			
+			$filePath = preg_replace('/\/$/', '/index.html', $filePath);
+			
+			$filePath = preg_replace('/\//', '/', $filePath);
+			
+			$fileName = preg_replace('/\//', '-', $fileName);
+
+			$o['curUrl'] = array(
+					'newUrl'=>$newUrl,
+					'fileName'=>$fileName
+			);
+			
+			$content = file_get_contents('C:/Users/Chaitanya/anilhyma.com/'.$filePath);
+			
+			file_put_contents($_SERVER['DOCUMENT_ROOT'].'/wedding/includes/'.$fileName, $content);
+		}
+		
+	}
+*/
+
+
+<div style="padding:10px;margin:5px;">
+
+<img src="itsyep.com/class.jpg" style="width:350px;height:350px"/>
+
+
+// $fileName = 'C:/wamp64/www/cap.org/public_html/'.'index.php';
+		
+		// $beg = strrpos($fileName, '/');
+		
+		// $end = strrpos($fileName, '.');
+		
+		// $len = $end - $beg - 1;
+		
+		// $onlyFileName = substr($fileName, $beg+1, $len);
+
+
+UPDATE `books` SET `latest` = '0' WHERE `books`.`id` = 102;
+
+
+<?php
+	include rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/library/includes/functions/display-functions.php';
+	
+	$dAction = 'del';
+	
+	$eAction = 'edit';
+	
+	$db = new mysqli('127.0.0.1', 'chaitanya', 'Chaitanya', 'chaitanya_useraccounts');
+	
+	$numPerPage = 4;
+	
+	$query = '
+		SELECT DISTINCT 
+			num_id 
+		FROM 
+			chaitanya_useraccounts.books
+		';
+	
+	$result = mysqli_query($p->dbToken, $query);
+	//$result = $db->query($p->dbToken, $query);
+	
+	if(!$result)
+	{
+		$errTxt = mysqli_error($p->dbToken);	
+		
+		print_r($errTxt);
+		
+		error_submission($query, $p->dbToken, __LINE__, __FILE__);
+	}
+	
+	else
+	{
+		$numberOfRecords = mysqli_num_rows($result);
+		
+		$numberOfPages = ceil($numberOfRecords/$numPerPage);
+	}
+	
+	$startAt = $numPerPage * ($currentPage - 1);
+	
+	$j = 1;
+	
+	$startAt++;
+	
+	if(isset($_SESSION['user']))
+	{
+		/*comment.php file*/
+		
+		if(isset($_POST['submit']))
+		{
+			foreach($_POST as $k=>$v)
+			{
+				$_POST[$k] = trim($v);
+				
+				if($k == 'favouriteSubject')
+				{
+					switch($v)
+					{
+						case 'Maths':
+						{
+							$_POST[$k] = 1;
+						}
+						break;
+						case 'Physics':
+						{
+							$_POST[$k] = 2;
+						}
+						break;
+						case 'Chemistry':
+						{
+							
+							$_POST[$k] = 3;
+						}
+						break;
+					}
+				}
+				
+				if($k == 'hobbies')
+				{
+					$hobbArray = explode(',', $_POST[$k]);
+					
+					foreach($hobbArray as $key=>$value)
+					{
+						$hobbArray[$key] = trim($value);
+					}
+					$hobbies = implode(",", $hobbArray);
+				}
+			}
+			
+			$query = "
+			SELECT
+				MAX(dateUpdated) as dateUpdated
+			FROM
+				chaitanya_useraccounts.books
+			WHERE
+				num_id = '{$_POST['submit']}'
+			LIMIT
+				1
+			";
+			
+			$result = mysqli_query($p->dbToken, $query);
+
+			$row = mysqli_fetch_assoc($result);
+			
+			$query = "
+				SELECT 
+					user,
+					age,
+					dateCreated
+				FROM 
+					`chaitanya_useraccounts`.`books`
+				WHERE
+					books.dateUpdated = '{$row['dateUpdated']}' AND books.num_id = '{$_POST['submit']}'
+				LIMIT
+					1
+			";
+			
+			$result = mysqli_query($p->dbToken, $query);
+
+			$row = mysqli_fetch_assoc($result);
+			
+			$query = "
+				INSERT INTO 
+					`chaitanya_useraccounts`.`books` (
+						`id`,
+						`num_id`,
+						`user`,
+						`age`,
+						`due`,
+						`favouriteSubject`,
+						`hobbies`,
+						`favouriteSport`,
+						`nameOfBooks`,
+						`dateCreated`,
+						`dateUpdated`
+					)
+					VALUES(
+						(SELECT MAX(id)+1 FROM `chaitanya_useraccounts`.`books` p),
+						'{$_POST['submit']}',
+						{$row['user']},
+						{$row['age']},
+						0,
+						{$_POST['favouriteSubject']},
+						'$hobbies',
+						'{$_POST['favouriteSport']}',
+						'{$_POST['booksTakenName']}',
+						'{$row['dateCreated']}',
+						(SELECT NOW())
+					);	
+				";
+			
+			$result = mysqli_query($p->dbToken, $query);
+		
+			$errTxt = mysqli_error($p->dbToken);	
+			
+			print_r($errTxt);
+		
+		}
+	}
+
+	for($i = $startAt; $i<$startAt+4;$i++)
+	{
+		
+		$query = "
+			SELECT
+				MAX(dateUpdated) as dateUpdated
+			FROM
+				chaitanya_useraccounts.books
+			WHERE
+				num_id = $i
+		";
+		$result = mysqli_query($p->dbToken, $query);
+		
+		$row = mysqli_fetch_assoc($result);
+		
+		$query = "
+			SELECT 
+				users.name,
+				books.nameOfBooks,
+				books.favouriteSubject,
+				books.favouriteSport,
+				books.hobbies,
+				books.id,
+				subjects.subjectName
+			FROM 
+				chaitanya_useraccounts.books
+			LEFT JOIN
+				users
+			ON
+				books.user = users.id
+			JOIN
+				subjects
+			ON
+				books.favouriteSubject = subjects.id
+			WHERE
+				books.dateUpdated = '{$row['dateUpdated']}' AND books.num_id = $i
+			LIMIT
+				1
+		";
+		$result = mysqli_query($p->dbToken, $query);
+		
+		if(!$result)
+		{
+			$errTxt = mysqli_error($p->dbToken);	
+			
+			print_r($errTxt);
+			
+			error_submission($query, $p->dbToken, __LINE__, __FILE__);
+		}
+		
+
+		if(isset($_SESSION['user']))
+		{
+			if($result)
+			{
+				while($row = mysqli_fetch_assoc($result))
+				{
+					$p->output .= 
+					'
+						<div class="' .$p->bord_con_class['class']. '">
+						
+							<div>
+								' . $row['name'];
+					$p->output	.= '</div>';
+				
+					$p->output .= ' 
+						<div>
+							<form action="" method="post" id="form">
+							FavouriteSubject :	<input name="favouriteSubject" id="favouriteSubject'.$j.'" type="text" readonly class="favouriteSubject" value="'.$row['subjectName'].'"/>
+								<div style="float:right;">
+									FavouriteSport : <input name="favouriteSport" id="favouriteSport'.$j.'" type="text" readonly class="favouriteSport" value="'.$row['favouriteSport'].'"/>
+								</div>
+						</div>';
+					/*
+						If the user login he can see edit button and delete button
+					*/
+					$p->output .= '
+							<p class="'.$p->content['class'].'">
+								<textarea name="booksTakenName" id="nameOfBooks'.$j.'" class="nameOfBooks">
+									'.$row['nameOfBooks'].'
+								</textarea>
+							</p>
+							Hobbies : <input name="hobbies" type="text" id="hobbies'.$j.'" class="hobbies" readonly value="' . $row['hobbies'] . '"/>
+							</form>
+						</div>';
+				}
+			}
+		}
+		else
+		{
+			if($result)
+			{
+				while($row = mysqli_fetch_assoc($result))
+				{
+					$p->output .= 
+					'
+						<div class="' .$p->bord_con_class['class']. '">
+						
+							<div >
+								' . $row['name'];
+					$p->output	.= '</div>';	
+							if(isset($_SESSION['user']))
+							{	
+								$p->output .= '<div>
+									<a href="'.$p->edit_nav_page['href'].'/'.$row['id'].'">
+										<img class="'.$p->edit_img['class'].'"/>
+									</a>
+								</div>';
+							}
+						$p->output .= '
+						<button name="toggle" type="button">Show/Hide</button> 
+						<div>
+							FavouriteSubject :	'.$row['subjectName'].'
+							<div style="float:right;">
+								FavouriteSport : '.$row['favouriteSport'].'
+							</div>
+						</div>';
+						/*
+							If the user login he can see edit button and delete button
+						*/
+						$p->output .= '
+							<p class="'.$p->content['class'].'">
+							' . $row['nameOfBooks'] . '
+							</p>
+							Hobbies : ' . $row['hobbies'] . '
+					</div>';
+				}
+			}
+		}
+		$j++;
+	}
+	
+	$p->title = 'Guest Book Comments';
+	
+	$p->output .= '<div class="'.$p->pag_nav_class['class'].'">';
+	
+	$numlinks = 4;
+	
+	$p->output .= page_nav($numlinks, $currentPage, $numberOfPages);
+	
+	$p->output .= '</div></main>';
+	
+	
+	$p->bodyScripts[]['code'] = '
+		var page = "/library/'.$currentPage.'";
+		
+		var menuElement = document.getElementById("menu");
+		
+		var divHiddenElement = document.getElementById("div_hid_menu");
+		
+		divHiddenElement.addEventListener("click", menuToggle, true);
+		/*
+			Click event is added to that element and menuToggle is called when clicked
+		*/
+		function sendData()
+		{
+			var commentNumber = parseInt('.$numPerPage * ($currentPage - 1).')+parseInt(arguments[0]);;
+			
+			var formElement = document.getElementById("form");
+			
+			var formData = new FormData(formElement);
+			
+			//formData.append("favouriteSubject", "");
+			
+			url = "";
+			
+			for(var i = 0; i <= document.forms[0].elements.length-1; i++)
+			{
+				url += formElement.elements[i].name;
+				
+				url += "=";
+				
+				url += formElement.elements[i].value.trim();
+				
+				url += "&";
+			}
+			
+			url += "submit="+commentNumber;
+			
+			var request = new XMLHttpRequest();
+			
+			request.open("POST", page, true);
+			
+			request.setRequestHeader("JSREQ", "1");
+			
+			request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			
+			request.onreadystatechange = function () {
+							if(request.readyState == 4)
+							{
+								console.log(request.responseText);
+								$("#main_width").html(request.responseText);
+							}
+			};
+
+			request.send(url);
+		}
+		
+		function menuToggle()
+		{
+			if(menuElement.className == "menu_off" || menuElement.className == "menu")
+			{
+				menuElement.className = "menu_on";
+			}
+			else
+			{
+				menuElement.className = "menu_off";
+			}
+		}
+		/*
+			menu_off has display : none so that menu is invisible and now if menu_on is the class menu is visible
+		*/
+
+		$(":button").addClass("show_hide_button");
+		/*
+		$(":button").on("click", function(){
+			
+				var sibDiv = $(this).siblings("div");
+				
+				var curState = $(sibDiv).css("display");
+				
+				if(curState == "block")
+				{
+					$(sibDiv).hide();
+					//.toggleClass("div_border_off");
+				}
+				else
+				{
+					$(sibDiv).show();
+				}
+			});
+			*/
+		
+		$(":button").each(function(){$(this).on("click", function(){$(this).siblings(".content").slideToggle(600);})});
+		/*
+			Adds click event listener and on one click on button div_border slide up and on dbl click on 
+		*/
+		
+		function cnstValue()
+		{
+			$("#"+arguments[0]).attr("readonly", "true");
+			$("#"+arguments[0]).css("border", "0px");
+			$("#"+arguments[0]).css("background", "inherit");
+		}
+		function editValue()
+		{
+			$("#"+arguments[0]).removeAttr("readonly");
+			$("#"+arguments[0]).css("border", "2px");
+			$("#"+arguments[0]).css("background", "white");
+		}
+		
+		var favouriteSubject = {"1":"favouriteSubject1", "2":"favouriteSubject2", "3":"favouriteSubject3", "4":"favouriteSubject4"};
+		
+		var favouriteSport = {"1":"favouriteSport1", "2":"favouriteSport2", "3":"favouriteSport3", "4":"favouriteSport4"};
+		
+		var hobbies = {"1":"hobbies1", "2":"hobbies2", "3":"hobbies3", "4":"hobbies4"};
+		
+		var nameOfBooks = {"1":"nameOfBooks1", "2":"nameOfBooks2", "3":"nameOfBooks3", "4":"nameOfBooks4"};
+		
+		jQuery.each(favouriteSubject, function(i, val){
+			$("#" + val).focus(function(){editValue(val);});
+			$("#" + val).blur(function(){cnstValue(val);sendData(i)});
+		});
+		
+		jQuery.each(favouriteSport, function(i, val){
+			$("#" + val).focus(function(){editValue(val);});
+			$("#" + val).blur(function(){cnstValue(val);sendData(i);});
+		});
+		
+		jQuery.each(hobbies, function(i, val){
+			$( "#" + val ).focus(function(){editValue(val);});
+			$( "#" + val ).blur(function(){cnstValue(val);sendData(i);});
+		});
+		
+		jQuery.each(nameOfBooks, function(i, val){
+			$( "#" + val ).focus(function(){editValue(val);});
+			$( "#" + val ).blur(function(){cnstValue(val);sendData(i);});
+		});
+		
+		
+		
+	';	
+	
+	/*
+		function cnstValue()
+		{
+			$("#"+arguments[0])
+				.attr("readonly","true");
+				.css({"border":"0px","background":"inherit"});
+		}
+		
+		function editValue()
+		{
+			$("#"+arguments[0]).removeAttr("readonly");
+			$("#"+arguments[0]).css("border", "2px");
+			$("#"+arguments[0]).css("background", "white");
+		}
+		
+		var favouriteSubject = {
+				"1":"favouriteSubject1", 
+				"2":"favouriteSubject2", 
+				"3":"favouriteSubject3", 
+				"4":"favouriteSubject4"
+			};
+		
+		var favouriteSport = {"1":"favouriteSport1", "2":"favouriteSport2", "3":"favouriteSport3", "4":"favouriteSport4"};
+		console.log(favouriteSport.1, favouriteSport[1]);
+		var hobbies = {"1":"hobbies1", "2":"hobbies2", "3":"hobbies3", "4":"hobbies4"};
+		
+		var nameOfBooks = {"1":"nameOfBooks1", "2":"nameOfBooks2", "3":"nameOfBooks3", "4":"nameOfBooks4"};
+		
+		$.each(favouriteSubject, function(i, val){
+			$("#" + val)
+				.on("focus", function(){editValue(val);})
+				.focus(function(){editValue(val);})
+				.blur(function(){cnstValue(val);sendData(i)});
+		});
+		
+		jQuery.each(favouriteSport, function(i, val){
+			$("#" + val).focus(function(){editValue(val);});
+			$("#" + val).blur(function(){cnstValue(val);sendData(i);});
+		});
+		
+		jQuery.each(hobbies, function(i, val){
+			$( "#" + val ).focus(function(){editValue(val);});
+			$( "#" + val ).blur(function(){cnstValue(val);sendData(i);});
+		});
+		
+		jQuery.each(nameOfBooks, function(i, val){
+			$( "#" + val ).focus(function(){editValue(val);});
+			$( "#" + val ).blur(function(){cnstValue(val);sendData(i);});
+		});
+		
+		*/
+?>
+
+
+
+public function Form($c)
+		{
+			/*
+				S> Login Form
+			*/
+			$output = '
+				<div class="div_form_border">
+					<form action="/test/configurator" method="post" class="login_form" id="loginForm">
+						<div class="div_form">
+							Domain Title
+						</div>
+						
+						<input name="domain:title" class="input_properties" value="'.$c->domain['title'].'" type="text" placeholder="Domain Title"/>
+						
+						<div class="div_form">
+							Domain Url
+						</div>
+						
+						<input name="domain:url" class="input_properties" value="'.$c->domain['url'].'" type="text" placeholder="Domain Url"/>
+						
+						<div class="div_form">
+							Admin Email
+						</div>
+						
+						<input name="adminEmail" class="input_properties" value="'.$c->adminEmail.'" type="text" placeholder="Admin Email"/>
+						
+						<div class="div_form">
+							Database Username
+						</div>
+						
+						<input name="dbPass:admin" class="input_properties" value="'.$c->dbPass['admin'].'" type="text" placeholder="Database Username"/>
+						
+						<div class="div_form">
+							Database Password
+						</div>
+						
+						<input name="dbPass:reader" class="input_properties" value="'.$c->dbPass['reader'].'" type="text" placeholder="Database Password"/>
+						
+						<div class="div_form">
+							RecordLogs User
+						</div>';
+						
+						$rlusert = '';
+						
+						$rluserf = '';
+						
+						$c->recordLogs['user'] ? ($rlusert = 'checked') : ($rluserf = 'checked');
+						
+						$output .= '
+							<input name="recordLogs:user" '.$rlusert.' value="true" type="radio">
+								True
+							</input>
+							
+							<input name="recordLogs:user" '.$rluserf.' value="false" type="radio">
+								False
+							</input>
+							
+							<div class="div_form">
+								RecordLogs site
+							</div>
+						';
+						
+						$rlsitet = '';
+						
+						$rlsitef = '';
+						
+						$c->recordLogs['site'] ? ($rlsitet == 'checked') : ($rlsitef = 'checked');
+						
+						$output .= '
+							<input name="recordLogs:site" '.$rlsitet.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="recordLogs:site" '.$rlsitef.' value="false" type="radio">
+								False
+							</input>
+						
+						
+						<div class="div_form">
+							UserImage FileName
+						</div>
+						
+						<input name="userImage:file" class="input_properties" value="'.$c->userImage['file'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							UserImage
+						</div>
+						
+						<input name="userImage:thumbHeight" class="input_properties" value="'.$c->userImage['thumbHeight'].'" type="text" placeholder="ThumbHeight"/>
+						
+						<div class="div_form">
+							UserImage
+						</div>
+						
+						<input name="userImage:thumbWidth" class="input_properties" value="'.$c->userImage['thumbWidth'].'" type="text" placeholder="ThumbWidth"/>
+						
+						<div class="div_form">
+							Is DEV
+						</div>';
+						
+						$isDevt = '';
+						
+						$isDevf = '';
+						
+						$c->isDev ? ($isDevt = 'checked') : ($isDevf = 'checked');
+						
+						$output .= '
+							<input name="isDev" '.$isDevt.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="isDev" '.$isDevf.' value="false" type="radio">
+								False
+							</input>
+						
+						<div class="div_form">
+							Is Test
+						</div>';
+						
+						$isTestt = '';
+						
+						$isTestf = '';
+						
+						$c->isTest ? ($isTestt = 'checked') : ($isTestf = 'checked');
+						
+						$output .= '
+							<input name="isTest" '.$isTestt.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="isTest" '.$isTestf.' value="false" type="radio">
+								False
+							</input>
+						
+						<div class="div_form">
+							Site Label
+						</div>
+						
+						<input name="site:label" class="input_properties" value="'.$c->site['label'].'" type="text"/>
+						
+						<div class="div_form">
+							Site Title
+						</div>
+						
+						<input name="site:title" class="input_properties" value="'.$c->site['title'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Site Organisation
+						</div>
+						
+						<input name="site:org" class="input_properties" value="'.$c->site['org'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Site Title no space
+						</div>
+						
+						<input name="site:title_no_space" class="input_properties" value="'.$c->site['title_no_space'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Site Keywords
+						</div>
+						
+						<input name="site:keywords" class="input_properties" value="'.$c->site['keywords'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Site Description
+						</div>
+						
+						<input name="site:description" class="input_properties" value="'.$c->site['description'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Logo Alt-text
+						</div>
+						
+						<input name="logo:alt-text" class="input_properties" value="'.$c->logo['alt-text'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Logo Title
+						</div>
+						
+						<input name="logo:title" class="input_properties" value="'.$c->logo['title'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Logo Link-url
+						</div>
+						
+						<input name="logo:link-url" class="input_properties" value="'.$c->logo['link-url'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Logo Size
+						</div>
+						
+						<input name="logo:size" class="input_properties" value="'.$c->logo['size'].'" type="text" placeholder=""/>
+						
+						
+						<div class="div_form">
+							Logo Style
+						</div>
+						
+						<input name="logo:hasStyle" class="input_properties" value="'.$c->logo['hasStyle'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Logo Small`s img-file
+						</div>
+						
+						<input name="logo:small:img-file" class="input_properties" value="'.$c->logo['small']['img-file'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Logo Small`s width
+						</div>
+						
+						<input name="logo:small:width" class="input_properties" value="'.$c->logo['small']['width'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Logo Small`s height
+						</div>
+						
+						<input name="logo:small:height" class="input_properties" value="'.$c->logo['small']['height'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Logo Small`s Class
+						</div>
+						
+						<input name="logo:small:class" class="input_properties" value="'.$c->logo['small']['class'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Logo Large`s Img-file
+						</div>
+						
+						<input name="logo:large:img-file" class="input_properties" value="'.$c->logo['large']['img-file'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Logo Large`s Width
+						</div>
+						
+						<input name="logo:large:width" class="input_properties" value="'.$c->logo['large']['width'].'" type="text" placeholder=""/>
+						
+						
+						<div class="div_form">
+							Logo Large`s Height
+						</div>
+						
+						<input name="logo:large:height" class="input_properties" value="'.$c->logo['large']['height'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Logo Large`s Class
+						</div>
+						
+						<input name="logo:large:class" class="input_properties" value="'.$c->logo['large']['class'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Logo Mail`s Img-file
+						</div>
+						
+						<input name="logo:mail:img-file" class="input_properties" value="'.$c->logo['mail']['img-file'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Include Login
+						</div>';
+						
+						$inLogint = '';
+						
+						$inLoginf = '';
+						
+						$c->include['login'] ? ($inLogint = 'checked') : ($inLoginf = 'checked');
+						
+						$output .= '
+							<input name="include:login" '.$inLogint.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:login" '.$inLoginf.' value="false" type="radio">
+								False
+							</input>
+					
+						<div class="div_form">
+							Include Sidebar
+						</div>';
+						
+						$inSidebart = '';
+						
+						$inSidebarf = '';
+						
+						$c->include['login'] ? ($inSidebart = 'checked') : ($inSidebarf = 'checked');
+						
+						$output .= '
+							<input name="include:sidebar" '.$inSidebart.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:sidebar" '.$inSidebarf.' value="false" type="radio">
+								False
+							</input>
+						
+						<div class="div_form">
+							Include Cleanoutput
+						</div>';
+						
+						$inCleanoutputt = '';
+						
+						$inCleanoutputf = '';
+						
+						$c->include['cleanoutput'] ? ($inCleanoutputt = 'checked') : ($inCleanoutputf = 'checked');
+						
+						$output .= '
+							<input name="include:cleanoutput" '.$inCleanoutputt.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:cleanoutput" '.$inCleanoutputf.' value="false" type="radio">
+								False
+							</input>
+						
+						
+						<div class="div_form">
+							Include Toptitle
+						</div>';
+						
+						$inToptitlet = '';
+						
+						$inToptitlef = '';
+						
+						$c->include['toptitle'] ? ($inToptitlet = 'checked') : ($inToptitlef = 'checked');
+						
+						$output .= '
+							<input name="include:toptitle" '.$inToptitlet.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:toptitle" '.$inToptitlef.' value="false" type="radio">
+								False
+							</input>
+					
+						<div class="div_form">
+							Include gTrans
+						</div>';
+						
+						$ingTranst = '';
+						
+						$ingTransf = '';
+						
+						$c->include['gTrans'] ? ($ingTranst = 'checked') : ($ingTransf = 'checked');
+						
+						$output .= '
+							<input name="include:gTrans" '.$ingTranst.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:gTrans" '.$ingTransf.' value="false" type="radio">
+								False
+							</input>
+						
+						<div class="div_form">
+							Include BannerTop
+						</div>';
+						
+						$inBannerTopt = '';
+						
+						$inBannerTopf = '';
+						
+						$c->include['bannerTop'] ? ($inBannerTopt = 'checked') : ($inBannerTopf = 'checked');
+						
+						$output .= '
+							<input name="include:bannerTop" '.$inBannerTopt.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:bannerTop" '.$inBannerTopf.' value="false" type="radio">
+								False
+							</input>
+							
+						<div class="div_form">
+							Include Footbar
+						</div>';
+						
+						$inFootbart = '';
+						
+						$inFootbarf = '';
+						
+						$c->include['bannerTop'] ? ($inFootbart = 'checked') : ($inFootbarf = 'checked');
+						
+						$output .= '
+							<input name="include:footbar" '.$inFootbart.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:footbar" '.$inFootbarf.' value="false" type="radio">
+								False
+							</input>
+						
+						<div class="div_form">
+							Include Bookmarker
+						</div>';
+						
+						$inBookmarkert = '';
+						
+						$inBookmarkerf = '';
+						
+						$c->include['bannerTop'] ? ($inBookmarkert = 'checked') : ($inBookmarkerf = 'checked');
+						
+						$output .= '
+							<input name="include:bookmarker" '.$inBookmarkert.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:bookmarker" '.$inBookmarkerf.' value="false" type="radio">
+								False
+							</input>
+						
+						<div class="div_form">
+							Include meta g-login
+						</div>';
+						
+						$inMetat = '';
+						
+						$inMetaf = '';
+						
+						$c->include['meta']['g-login'] ? ($inMetat = 'checked') : ($inMetaf = 'checked');
+						
+						$output .= '
+							<input name="include:meta:g-login" '.$inMetat.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:meta:g-login" '.$inMetaf.' value="false" type="radio">
+								False
+							</input>
+						
+						<div class="div_form">
+							Include Styles local
+						</div>';
+						
+						$inStylest = '';
+						
+						$inStylesf = '';
+						
+						$c->include['styles']['local'] ? ($inStylest = 'checked') : ($inStylesf = 'checked');
+						
+						$output .= '
+							<input name="include:styles:local" '.$inStylest.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:styles:local" '.$inStylesf.' value="false" type="radio">
+								False
+							</input>
+							
+						<div class="div_form">
+							Include Styles global
+						</div>';
+						
+						$inStylesglobalt = '';
+						
+						$inStylesglobalf = '';
+						
+						$c->include['styles']['global'] ? ($inStylesglobalt = 'checked') : ($inStylesglobalf = 'checked');
+						
+						$output .= '
+							<input name="include:styles:global" '.$inStylesglobalt.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:styles:global" '.$inStylesglobalf.' value="false" type="radio">
+								False
+							</input>
+
+							</input>
+						
+						
+						<div class="div_form">
+							Include Styles alocal 
+						</div>';
+						
+						$inStylesalocalt = '';
+						
+						$inStylesalocalf = '';
+						
+						$c->include['styles']['alocal'] ? ($inStylesalocalt = 'checked') : ($inStylesalocalf = 'checked');
+						
+						$output .= '
+							<input name="include:styles:alocal" '.$inStylesalocalt.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:styles:alocal" '.$inStylesalocalf.' value="false" type="radio">
+								False
+							</input>
+						
+						<div class="div_form">
+							Include Styles aglobal 
+						</div>';
+						
+						$inStylesaglobalt = '';
+						
+						$inStylesaglobalf = '';
+						
+						$c->include['styles']['aglobal'] ? ($inStylesaglobalt = 'checked') : ($inStylesaglobalf = 'checked');
+						
+						$output .= '
+							<input name="include:styles:aglobal" '.$inStylesaglobalt.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:styles:aglobal" '.$inStylesaglobalf.' value="false" type="radio">
+								False
+							</input>
+							
+						<div class="div_form">
+							Include Styles rtf 
+						</div>';
+						
+						$inStylesRtft = '';
+						
+						$inStylesRtff = '';
+						
+						$c->include['styles']['rtf'] ? ($inStylesRtft = 'checked') : ($inStylesRtff = 'checked');
+						
+						$output .= '
+							<input name="include:styles:rtf" '.$inStylesRtft.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:styles:rtf" '.$inStylesRtff.' value="false" type="radio">
+								False
+							</input>
+							
+						<div class="div_form">
+							Include scripts local
+						</div>';
+						
+						$inScriptsLocalt = '';
+						
+						$inScriptsLocalf = '';
+						
+						$c->include['scripts']['local'] ? ($inScriptsLocalt = 'checked') : ($inScriptsLocalf = 'checked');
+						
+						$output .= '
+							<input name="include:scripts:local" '.$inScriptsLocalt.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:scripts:local" '.$inScriptsLocalf.' value="false" type="radio">
+								False
+							</input>
+						<div class="div_form">
+							Include scripts glocal
+						</div>';
+						
+						$inScriptsGlobalt = '';
+						
+						$inScriptsGlobalf = '';
+						
+						$c->include['scripts']['global'] ? ($inScriptsGlobalt = 'checked') : ($inScriptsGlobalf = 'checked');
+						
+						$output .= '
+							<input name="include:scripts:global" '.$inScriptsGlobalt.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:scripts:global" '.$inScriptsGlobalf.' value="false" type="radio">
+								False
+							</input>
+						<div class="div_form">
+							Include scripts alocal 
+						</div>';
+						
+						$inScriptsAlocalt = '';
+						
+						$inScriptsAlocalf = '';
+						
+						$c->include['scripts']['global'] ? ($inScriptsAlocalt = 'checked') : ($inScriptsAlocalf = 'checked');
+						
+						$output .= '
+							<input name="include:scripts:alocal" '.$inScriptsAlocalt.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:scripts:alocal" '.$inScriptsAlocalf.' value="false" type="radio">
+								False
+							</input>
+						<div class="div_form">
+							Include scripts aglobal 
+						</div>';
+						
+						$inScriptsAglobalt = '';
+						
+						$inScriptsAglobalf = '';
+						
+						$c->include['scripts']['aglobal'] ? ($inScriptsAglobalt = 'checked') : ($inScriptsAglobalf = 'checked');
+						
+						$output .= '
+							<input name="include:scripts:aglobal" '.$inScriptsAglobalt.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:scripts:aglobal" '.$inScriptsAglobalf.' value="false" type="radio">
+								False
+							</input>
+						<div class="div_form">
+							Include scripts g-login 
+						</div>';
+						
+						$inScriptsGlogint = '';
+						
+						$inScriptsGloginf = '';
+						
+						$c->include['scripts']['aglobal'] ? ($inScriptsGlogint = 'checked') : ($inScriptsGloginf = 'checked');
+						
+						$output .= '
+							<input name="include:scripts:g-login" '.$inScriptsGlogint.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:scripts:g-login" '.$inScriptsGloginf.' value="false" type="radio">
+								False
+							</input>
+						<div class="div_form">
+							Include scripts rtf 
+						</div>';
+						
+						$inScriptsRtft = '';
+						
+						$inScriptsRtff = '';
+						
+						$c->include['scripts']['aglobal'] ? ($inScriptsRtft = 'checked') : ($inScriptsRtff = 'checked');
+						
+						$output .= '
+							<input name="include:scripts:rtf" '.$inScriptsRtft.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:scripts:rtf" '.$inScriptsRtff.' value="false" type="radio">
+								False
+							</input>
+						<div class="div_form">
+							Include scripts gMap 
+						</div>';
+						
+						$inScriptsGmapt = '';
+						
+						$inScriptsGmapf = '';
+						
+						$c->include['scripts']['aglobal'] ? ($inScriptsGmapt = 'checked') : ($inScriptsGmapf = 'checked');
+						
+						$output .= '
+							<input name="include:scripts:gMap" '.$inScriptsGmapt.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:scripts:gMap" '.$inScriptsGmapf.' value="false" type="radio">
+								False
+							</input>
+							
+						<div class="div_form">
+							Include scripts gre 
+						</div>';
+						
+						$inScriptsGret = '';
+						
+						$inScriptsGref = '';
+						
+						$c->include['scripts']['aglobal'] ? ($inScriptsGret = 'checked') : ($inScriptsGref = 'checked');
+						
+						$output .= '
+							<input name="include:scripts:gre" '.$inScriptsGret.' value="true" type="radio"/>
+								True
+							</input>
+							
+							<input name="include:scripts:gre" '.$inScriptsGref.' value="false" type="radio">
+								False
+							</input>
+							
+						<div class="div_form">
+							Include Record Viewed
+						</div>';
+						
+						$recordViewedt = '';
+						
+						$recordViewedf = '';
+						
+						$c->include['record']['viewed'] ? ($recordViewedt = 'checked') : ($recordViewedf = 'checked');
+						
+						$output .= '
+							<input name="include:record:viewed" '.$recordViewedt.' value="true" type="radio">
+								True
+							</input>
+							
+							<input name="include:record:viewed" '.$recordViewedf.' value="false" type="radio">
+								False
+							</input>
+						<div class="div_form">
+							Include Record visited
+						</div>';
+						
+						$recordVisitedt = '';
+						
+						$recordVisitedf = '';
+						
+						$c->include['record']['visited'] ? ($recordVisitedt = 'checked') : ($recordVisitedf = 'checked');
+						
+						$output .= '
+							<input name="include:record:visited" checked value="true" type="radio">
+								True
+							</input>
+							
+							<input name="include:record:visited" value="false" type="radio">
+								False
+							</input>
+						<div class="div_form">
+							Social Login
+						</div>';
+						
+						$socialLogint = '';
+						$socialLoginf = '';
+						
+						$c->socialLogin ? ($socialLogint = 'checked') : ($socialLoginf = 'checked');
+						
+						$output .= '
+							<input name="socialLogin" '.$socialLogint.' value="true" type="radio">
+								True
+							</input>
+							
+							<input name="socialLogin" '.$socialLoginf.' value="false" type="radio">
+								False
+							</input>
+							
+						<div class="div_form">
+							CreateVersions
+						</div>';
+						
+						
+						$createVersionst = '';
+						
+						$createVersionsf = '';
+						
+						$c->createVersions ? ($createVersionst = 'checked') : ($createVersionsf = 'checked');
+						
+						$output .= '
+							<input name="createVersions" '.$createVersionst.' value="true" type="radio">
+								True
+							</input>
+							
+							<input name="createVersions" '.$createVersionsf.' value="false" type="radio">
+								False
+							</input>
+							
+						<div class="div_form">
+							ItemsPerPage 
+						</div>
+						
+						<input name="itemsPerPage" class="input_properties" value="'.$c->itemsPerPage.'" type="number" placeholder="Per Page"/>
+						
+						<div class="div_form">
+							Query Prep Count
+						</div>
+						
+						<input name="queryPrepCount" class="input_properties" value="'.$c->queryPrepCount.'" type="number" placeholder="Query Prep Count"/>
+						
+						<div class="div_form">
+							Query Count
+						</div>
+						
+						<input name="queryCount" class="input_properties" value="'.$c->queryCount.'" type="number" placeholder="Query Count"/>
+						
+						<div class="div_form">
+							Sec Home App
+						</div>
+						
+						<input name="sec:home:app" class="input_properties" value="'.$c->sec['home']['app'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Home Label
+						</div>
+						
+						<input name="sec:home:label" class="input_properties" value="'.$c->sec['home']['label'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Home Short-title
+						</div>
+						
+						<input name="sec:home:short-title" class="input_properties" value="'.$c->sec['home']['short-title'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Home Title
+						</div>
+						
+						<input name="sec:home:title" class="input_properties" value="'.$c->sec['home']['title'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Home Library
+						</div>
+						
+						<input name="sec:home:library" class="input_properties" value="'.$c->sec['home']['library'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Home Root
+						</div>
+						
+						<input name="sec:home:root" class="input_properties" value="'.$c->sec['home']['root'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Home Database
+						</div>
+						
+						<input name="sec:home:db" class="input_properties" value="'.$c->sec['home']['app'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Home version Database
+						</div>
+						
+						<input name="sec:home:vdb" class="input_properties" value="'.$c->sec['home']['vdb'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Home Template`s Page
+						</div>
+						
+						<input name="sec:home:vdb" class="input_properties" value="'.$c->sec['home']['app'].'" type="text" placeholder="version Database"/>
+						
+						<div class="div_form">
+							Sec Home
+						</div>
+						
+						<input name="sec:home:template:page" class="input_properties" value="'.$c->sec['home']['template']['page'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Home Template`s Sub-menu
+						</div>
+						
+						<input name="sec:home:template:sub-menu" class="input_properties" value="'.$c->sec['home']['template']['sub-menu'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Site App
+						</div>
+						
+						<input name="sec:site:app" class="input_properties" value="'.$c->sec['site']['app'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Site Label
+						</div>
+						
+						<input name="sec:site:label" class="input_properties" value="'.$c->sec['site']['label'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Site Short-title
+						</div>
+						
+						<input name="sec:site:short-title" class="input_properties" value="'.$c->sec['site']['short-title'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Site Title
+						</div>
+						
+						<input name="sec:site:title" class="input_properties" value="'.$c->sec['site']['title'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Site Library
+						</div>
+						
+						<input name="sec:site:library" class="input_properties" value="'.$c->sec['site']['library'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Site Root
+						</div>
+						
+						<input name="sec:site:root" class="input_properties" value="'.$c->sec['site']['root'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Site Database
+						</div>
+						
+						<input name="sec:site:db" class="input_properties" value="'.$c->sec['site']['db'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Site version Database
+						</div>
+						
+						<input name="sec:site:vdb" class="input_properties" value="'.$c->sec['site']['vdb'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Site Template`s Page
+						</div>
+						
+						<input name="sec:site:template:page" class="input_properties" value="'.$c->sec['site']['template']['page'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Site Template`s Sub-menu
+						</div>
+						
+						<input name="sec:site:template:sub-menu" class="input_properties" value="'.$c->sec['site']['template']['sub-menu'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Users App
+						</div>
+						
+						<input name="sec:users:app" class="input_properties" value="'.$c->sec['users']['app'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Users Label
+						</div>
+						
+						<input name="sec:users:label" class="input_properties" value="'.$c->sec['users']['label'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Users Short-title
+						</div>
+						
+						<input name="sec:users:short-title" class="input_properties" value="'.$c->sec['users']['short-title'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Users Title
+						</div>
+						
+						<input name="sec:users:title" class="input_properties" value="'.$c->sec['users']['title'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Users Library
+						</div>
+						
+						<input name="sec:users:library" class="input_properties" value="'.$c->sec['users']['library'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Users Root
+						</div>
+						
+						<input name="sec:users:root" class="input_properties" value="'.$c->sec['users']['root'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Users Database
+						</div>
+						
+						<input name="sec:users:db" class="input_properties" value="'.$c->sec['users']['db'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Users version Database
+						</div>
+						
+						<input name="sec:users:vdb" class="input_properties" value="'.$c->sec['users']['vdb'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Users Template`s Page
+						</div>
+						
+						<input name="sec:users:template:page" class="input_properties" value="'.$c->sec['users']['template']['page'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							Sec Users Template`s Sub-menu
+						</div>
+						
+						<input name="sec:users:template:sub-menu" class="input_properties" value="'.$c->sec['users']['template']['sub-menu'].'" type="text" placeholder=""/>
+						
+						<div class="div_form">
+							ID_SEARCH_SITE
+						</div>
+						
+						<input name="define:ID_SEARCH_SITE" class="input_properties" value="'.ID_SEARCH_SITE.'" type="text" placeholder="ID_SEARCH_SITE"/>
+						
+						<div class="div_form">
+							ID_SEARCH_WEB
+						</div>
+						
+						<input name="define:ID_SEARCH_WEB" class="input_properties" value="'.ID_SEARCH_WEB.'" type="text" placeholder="ID_SEARCH_WEB"/>
+						
+						<div class="div_form">
+							ID_GMAP_KEY
+						</div>
+						
+						<input name="define:ID_GMAP_KEY" class="input_properties" value="'.ID_GMAP_KEY.'" type="text" placeholder="ID_GMAP_KEY"/>
+						
+						<div class="div_form">
+							ID_GRE_CLIENT
+						</div>
+						
+						<input name="define:ID_GRE_CLIENT" class="input_properties" value="'.ID_GRE_CLIENT.'" type="text" placeholder="ID_GRE_CLIENT"/>
+						
+						<div class="div_form">
+							ID_GRE_SERVER
+						</div>
+						
+						<input name="define:ID_GRE_SERVER" class="input_properties" value="'.ID_GRE_SERVER.'" type="text" placeholder="ID_GRE_SERVER"/>
+						
+						<div class="div_form">
+							ID_GUSER_CLIENT
+						</div>
+						
+						<input name="define:ID_GUSER_CLIENT" class="input_properties" value="'.ID_GUSER_CLIENT.'" type="text" placeholder="ID_GUSER_CLIENT"/>
+						
+						<div class="div_form">
+							ID_GUSER_SECRET
+						</div>
+						
+						<input name="define:ID_GUSER_SECRET" class="input_properties" value="'.ID_GUSER_SECRET.'" type="text" placeholder="ID_GUSER_SECRET"/>
+						
+						<div class="div_form">
+							ENABLE_LOCAL_LOGIN
+						</div>';
+						
+						$enbLocLogint = '';
+						$enbLocLoginf = '';
+						
+						ENABLE_LOCAL_LOGIN ? ($enbLocLogint = 'checked') : ($enbLocLoginf = 'checked');
+						
+						$output .='
+							<input name="define:ENABLE_LOCAL_LOGIN" '.$enbLocLogint.' value="true" type="radio">
+								True
+							</input>
+							
+							<input name="define:ENABLE_LOCAL_LOGIN" '.$enbLocLoginf.' value="false" type="radio">
+								False
+							</input>
+							
+						<div class="div_form">
+							FLAG_RECORD_USERLOGS
+						</div>';
+						
+						$flagRecUsert =  '';
+						
+						$flagRecUserf =  '';
+						
+						FLAG_RECORD_USERLOGS ? ($flagRecUsert = 'checked') : ($flagRecUserf = 'checked');
+						
+						$output .='
+							<input name="define:FLAG_RECORD_USERLOGS" '.$flagRecUsert.' value="true" type="radio">
+								True
+							</input>
+							
+							<input name="define:FLAG_RECORD_USERLOGS" '.$flagRecUserf.' value="false" type="radio">
+								False
+							</input>
+							
+						<div class="div_form">
+							ENABLE_SOCIAL_LOGIN
+						</div>';
+						
+						$enbSocLogint = '';
+						
+						$enbSocLoginf = '';
+						
+						ENABLE_SOCIAL_LOGIN ? ($enbSocLogint = 'checked') : ($enbSocLoginf = 'checked');
+						
+						$output .='
+							<input name="define:ENABLE_SOCIAL_LOGIN" '.$enbSocLogint.' value="true" type="radio">
+								True
+							</input>
+							
+							<input name="define:ENABLE_SOCIAL_LOGIN" '.$enbSocLoginf.' value="false" type="radio">
+								False
+							</input>
+						<div class="div_form">
+							HOST_PREFIX
+						</div>
+						
+						<input name="define:HOST_PREFIX" class="input_properties" value="'.HOST_PREFIX.'" type="text" placeholder="HOST_PREFIX"/>
+						
+						<div class="div_form">
+							TIME_ZONE
+						</div>
+						
+						<input name="define:TIME_ZONE" class="input_properties" value="'.TIME_ZONE.'" type="text" placeholder="TIME_ZONE"/>
+						
+						<div class="div_form">
+							<button type="submit" id="btn">
+								Submit
+							</button>
+						</div>
+					</form>
+				</div>
+			';
+			
+			return $output;
+		}
+	}
+
+
+Variable scope 
+	
+	super global $_ 
+	global 
+	local 
+	
+Visibility 
+
+	public 
+		from within 
+		by descendants 
+		by objects 
+	protected 
+	private  
+	
+
+Class
+
+	a set of variables (calleld properties) and functions (ca;;ed methods) identified by a name 
+	which can be made use of only by making a coapy of it (calleda an object) 
+	
+	except when 
+		
+		the class is defnied as static 
+		the class is an abstract class 
+				
+			Abstract Class 	
+			
+				it can be used only for exetnsion 
+				it can act only as a parent
+				
+				a class that has atleast one abstract method will have to be an abstract class 
+				
+				the abstract method... has only the signature specified 
+					signature - function header 
+					
+				check ... 
+					
+					if they have to be public 
+					
+				can an abstract class once defined be overriden 
+
+					abstract class A{
+					
+						abstract function am1(){};
+					
+					}
+					
+						cannot instantiate to build an object 
+					
+					class B extends A {
+					
+						function am1(){
+						
+						
+						};
+					
+					}
+					
+					
+					class C extends B {
+					
+						function am1(){
+						
+						
+						};
+					
+					}
+					
+					overriding rule - has to be one with the same greater visibility
+					
+					abstract private function amp1(){};
+					
+						can the visibility be varied while defining 
+						
+						can the visibility be varied while overiding 
+						
+					
+			Interface 
+
+				a set of public method signatures identified by a name 
+				
+				since they are all signatures 
+				... it cannot be instantiated to build an object 
+				
+				can we extend interfaces 
+				
+					interface A {
+					
+					}
+					
+					interface B extens A {
+					
+					}
+				
+					interface C extens B {
+					
+					}
+				
+				can we override a method defined whose signature is defined in an interface 	
+					
+					
+					class A implements A {
+					
+					
+					}
+					
+					can we use teh same name for class and interface 
+					
+					can we use teh same name for class and variables 
+					
+					can we use teh same name for variables and functions 
+					
+					
+					class B extedns A {
+					
+						
+						can we override a method ... whose signature is specified in interface 
+					}					
+					
+					
+			Traits 
+
+				set of methods 	identified by a name which can be included in a class  
+				
+				
+				use TraitName;
+				
+				multiple traits can be included in the same class 
+				
+				A extends B, C , D ... not possible 
+				
+				A
+				use TraitA, TraitB, TraitC .... possible 
+					
+					
+					
+Javascript Classes 
+
+
+	class A {
+	
+	}
+	
+	class B extends A {
+	
+	}
+					
+	create objects based on A 
+	then on B 
+	
+var a = 20;
+
+console.log(a);
+
+function t3(){
+	
+	console.log(a);
+	let a = 40;
+	
+	var la = 240;
+	{
+		{
+			{
+				{
+					console.log(a);
+					
+					console.log(lc);
+					
+					{
+						{
+							let lc = 3434;
+							
+							var lb = 121;
+							
+							window.lm = 456;
+							{
+								{
+								
+								}
+							}
+						}
+					}				
+				}
+			}
+		}
+	}
+} t3();
+
+console.log(lm);
+
+var a = 20;
+var b = 120;
+var c;
+
+console.log(a);
+console.log(b);
+console.log(c);
+//console.log(d);
+
+function t2(){
+	
+	console.log(b);
+	console.log(a);
+	console.log(la);
+	var a = 40;
+	var la = 240;
+	console.log(a);
+	console.log(la);
+	console.log(lb);
+	{
+		{
+			{
+				{
+					{
+						{
+							console.log(lb);
+							var lb = 121;
+							console.log(lb);
+							{
+								{
+								
+								}
+							}
+						}
+					}				
+				}
+			}
+		}
+	}
+} t2();
+
+console.log(lb);
+		
+					
+	
+
+
+
+let don't allow function hoisting.
+var don't allow function hoisting through fuction expression.
+var allow function hoisting from declared block using function definition.
+----------------------------------
+function learn(a){
+    return function learn1(a1){
+        console.log(a, a1);
+    }
+}
+
+var b = learn(123);
+
+b(456); --  it produces output 123 456
+
+learn1(456); -- It produces error
+-------------------------------
+function test1 (a1 = 2000)
+{
+    console.log(a1);
+}
+
+a1();-Error
+-------------------------------------
+function test(t1){
+    function inTest(t2){
+        function inInTest(t3)
+        {
+            console.log(t1, t2, t3);
+        }
+        inInTest(789);
+    }
+ inTest(456);
+}
+test(123);	- It produces output 123 456 789
+---------------------------------------------
+
+
+
+
+function makeAdder(x) {
+  return function(y) {
+    return x + y;
+  };
+}
+
+var add5 = makeAdder(5);
+var add10 = makeAdder(10);
+
+console.log(add5(2));  // 7
+console.log(add10(2)); // 12
+
+
+
+
+function definition
+function f1(f1d) {
+
+
+}
+
+
+function expression 
+
+var ft1 = function (ft1d) {
+
+
+};
+
+
+
+----------------------
+function f1(f1d) {
+
+	function f11(f11d) {
+	
+		function f111(f111d) {
+			
+			var f111lv = 456;		check scope 
+			
+			console.log(f1d, f11d, f111d);	
+
+		}
+		
+		f111(444);
+	}
+	
+	f11(123);
+}
+
+f1(999);
+
+----------------------
+function tf (a1 = 200){
+
+	console.log(a1);
+}
+
+a1();
+a1(400);
+----------------------
+
+var ats = someFunction(45);
+~~~~~
+function te(ted) {
+
+	return function tei(teid) {
+	
+		console.log(ted, teid);
+	
+	}
+}
+
+
+var eet = te(456);
+
+eet(54);
+
+tei(444);
+
+--------------------------
+
+IIFD
+(function(){})()
+Immediately			Invoked 
+Instantaneously 
+
+var a = 10;
+
+
+
+
+
+
+
+
+
+class A{
+	constructor(x){
+		this.a = x;
+	}
+	learn()
+	{
+		console.log(this.a);
+	}
+}
+class B extends A{
+	constructor(y){
+		super(y);
+		this.x = 456;
+		this.y = 123;
+		//this.a = 34;
+	}
+	test()
+	{
+		this.learn();
+		console.log(this.x+this.y);
+	}
+}
+
+
+
+
+
+var a = 20;
+
+
+
+function t2(){
+	//var a = 40;
+	//fn(455);
+	console.log(a);
+	{
+		{
+			{
+				{
+					//fn(455);
+					console.log(a);
+					let a = 10;
+					let fn = function(check){
+						console.log(check);
+					}
+					{
+					console.log(a);
+					fn(455);
+						{
+							{
+								{
+								
+								}
+							}
+						}
+					}				
+				}
+			}
+		}
+	}
+}
+
+var t3 = function(){};
+
+hoisting ... 
+flag hoisting 
+
+
+var a = 10;
+
+
+var t = 56;
+
+var a = document.querySelector('body');
+
+
+const 
+
+	accessibility 
+	override 
+	
+------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var a = 20;
+
+
+var a = 40;
+
+
+
+(function(){
+	console.log(1);
+})()
+
+
+
+(function test(){
+	console.log(2);
+})()
+
+
+
+			
+					
+					
+				
+				
+				

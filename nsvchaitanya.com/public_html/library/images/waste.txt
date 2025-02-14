@@ -1,0 +1,243 @@
+<!--Land Preparation and Management-->
+                        <tr>
+                          <td>Land Preparationa and Management
+                            <div class="col s12">
+                            <table class="bordered">
+                              <thead>
+                                <th></th>
+                                <th>Yes</th>
+                                <th>No</th>
+                                <th>Info</th>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                   <td>Irrigation</td>
+                                    <td><label><input name="Irrigation" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="Irrigation" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+                                  <tr>
+                                   <td>Watering</td>
+                                    <td><label><input name="Watering" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="Watering" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+                                  <tr>
+                                   <td>Land Preparation</td>
+                                    <td><label><input name="LP" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="LP" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+                                  <tr>
+                                   <td>Raised Beds</td>
+                                    <td><label><input name="RB" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="RB" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+                                  <tr>
+                                   <td>Crop Rotation</td>
+                                    <td><label><input name="CR" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="CR" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+
+                              </tbody>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <!--End of Land Preparation and  Management-->
+                      <!--Nutrition Management-->
+                       <tr>
+                          <td>Nutrition Management
+                            <div class="col s12">
+                            <table class="bordered">
+                              <thead>
+                                <th></th>
+                                <th>Yes</th>
+                                <th>No</th>
+                                <th>Info</th>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                   <td>Microbes</td>
+                                    <td><label><input name="microbes" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="microbes" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+                                  <tr>
+                                   <td>Manure</td>
+                                    <td><label><input name="manure" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="manure" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+                                  <tr>
+                                   <td>Bijamrita</td>
+                                    <td><label><input name="bijamrita" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="bijamrita" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+                                  <tr>
+                                   <td>Ganajiwamrita</td>
+                                    <td><label><input name="ganajiwamrita" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="ganajiwamrita" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+                                  <tr>
+                                   <td>Jeevamrutha</td>
+                                    <td><label><input name="jeevamrutha" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="jeevamrutha" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+                                  <tr>
+                                   <td>Mulching</td>
+                                    <td><label><input name="mulching" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="mulching" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+
+                              </tbody>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- End of Nutrition Management-->
+                      <!-- Nursery Management-->
+                       <tr>
+                          <td>Nursery Management
+                            <div class="col s12">
+                            <table class="bordered">
+                              <thead>
+                                <th></th>
+                                <th>Yes</th>
+                                <th>No</th>
+                                <th>Info</th>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                   <td>Desi seed</td>
+                                    <td><label><input name="desiSeed" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="desiSeed" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+                                  <tr>
+                                   <td>Pro - Trays</td>
+                                    <td><label><input name="proTrays" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="proTrays" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+                                </tbody>  
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- End of Nursery Management-->
+                      <!--  Sowing to Harvest Management-->
+                      <tr>
+                          <td>Sowing to Harvest  Management
+                            <div class="col s12">
+                            <table class="bordered">
+                              <thead>
+                                <th></th>
+                                <th>Yes</th>
+                                <th>No</th>
+                                <th>Info</th>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                   <td>Spacing </td>
+                                    <td><label><input name="spacing" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="spacing" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+                                  <tr>
+                                   <td>Sowing Seeds</td>
+                                    <td><label><input name="sowingSeeds" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="sowingSeeds" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+                                  <tr>
+                                   <td>Harvest Yield</td>
+                                    <td><label><input name="harvestYield" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="harvestYield" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Filled / Empty Bed \</td>
+                                    <td><label><input name="FEBed" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="FEBed" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+
+                              </tbody>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- End of Sowing to Harvest Management-->
+                      <!-- Pest and Disease Management-->
+                      <tr>
+                          <td>Pest and Disease  Management
+                            <div class="col s12">
+                            <table class="bordered">
+                              <thead>
+                                <th></th>
+                                <th>Yes</th>
+                                <th>No</th>
+                                <th>Info</th>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                   <td>Neem oil</td>
+                                    <td><label><input name="neemOil" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="neemOil" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+                                  <tr>
+                                   <td>Trap crops</td>
+                                    <td><label><input name="trapCrops" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="trapCrops" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+                                  <tr>
+                                   <td>Weeding </td>
+                                    <td><label><input name="Weeding" type="radio" value="Yes"  /></label></td>
+                                    <td><label><input name="Weeding" type="radio" value="No" /></label></td>
+                                    <td><label><a href="FAQ.html#w"><i class="material-icons">info_outline</i></a></label></td>
+                                  </tr>
+                                  
+
+                              </tbody>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- End of Pest and Disease Management-->
+					  
+					  
+					  '{$_POST['vegetables']}',
+			'{$_POST['options']}',
+			'{$_POST['date']}',
+			'{$_POST['Irrigation']}',
+			'{$_POST['Watering']}',
+			'{$_POST['Land_Preparation']}',
+			'{$_POST['Raised_Beds']}',
+			'{$_POST['Crop_Rotation']}',
+			'{$_POST['Microbes']}',
+			'{$_POST['Manure']}',
+			'{$_POST['Bijamrita']}',
+			'{$_POST['Ganajiwamrita']}',
+			'{$_POST['Jeevamrutha']}',
+			'{$_POST['Mulching']}',
+			'{$_POST['Desi_seed']}',
+			'{$_POST['Pro_-_Trays']}',
+			'{$_POST['Spacing']}',
+			'{$_POST['Sowing_Seeds']}',
+			'{$_POST['Harvest_Yield']}',
+			'{$_POST['Filled_/_Empty_Bed']}',
+			'{$_POST['Neem_oil']}',
+			'{$_POST['Trap_crops']}',
+			'{$_POST['Weeding']}',
+			CURRENT_TIMESTAMP
+		);
+

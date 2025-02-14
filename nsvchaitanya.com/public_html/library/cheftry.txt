@@ -1,0 +1,35 @@
+cheftry 
+
+	dish 
+		
+		ingredients
+		
+			1. 
+			2. 
+			3. 
+			
+		tools 
+		
+			1.
+			2.
+			3. 
+		
+		how to make 
+		
+			text 
+			video 
+				timing 
+			
+	Trial Box
+	
+		packs 
+		
+		SP -> share 
+	
+	Dish -> multi language (same dish with different names)
+	
+	
+NDA 
+IPR 
+
+	

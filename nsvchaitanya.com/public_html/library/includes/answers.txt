@@ -1,0 +1,41 @@
+In abstract class, Abstract method can never be declared as private
+
+In abstract class, If abstract method is declared as protected, In extended class it can be 
+	declared as protected or public. (i.e Higher Visibility)
+	
+In overriding, It has be one with higher visibility - Overriding Rule
+
+In interfaces, Interface functions can  be Overrided and overriding rule is still intact.
+
+Same names for interfaces and classes is not possible.
+
+Same names for variables and functions is possible.
+
+Same names for variables and class names is possible.
+
+
+Traget 
+	Build 
+	y = a0x0 + a1x1 
+	Find 
+		a0, a1 
+		based on {(x11,y1), (x12,y2), (x13,y3), ...}
+	Logic 
+	
+		a0, a1 that give the least value for sum(ye - y)^2 
+
+		c = sum(ye - y)^2 
+		
+			c = sum([a0x0 + a1x1] - y)^2 
+			
+				a0, a1 constants 
+				x0 = 1constant 
+				x1, y variables 
+
+			c = sigma(i : 1 to m)([a0x0 + a1x1i] - yi)^2 
+			
+				m = num of values for x0, y
+				
+					{(x11,y1), (x12,y2), (x13,y3), ...}
+					cardinality of this set 
+

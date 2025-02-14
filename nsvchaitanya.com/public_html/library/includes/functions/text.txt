@@ -1,0 +1,71 @@
+$output .= 
+	'<script>
+		buttonElement = document.getElementById("btn");
+		
+		buttonElement.addEventListener("click", createUrl);
+		/*
+			Adding event listener to button element and it is fired on click and function createUrl is called
+		*/
+		var url;
+		
+		var formElement = document.getElementById("form");
+		
+		function createUrl()
+		{
+			var page = "submit";
+			
+			url = "";
+			
+			for(var i = 0; i < document.forms[1].elements.length-1; i++)
+			{
+				if(formElement.elements[i].name == "due")
+				{
+					if(document.getElementById("checkValue").checked)
+					{
+						url += formElement.elements[i].name;
+					
+						url += "=";
+					
+						url += formElement.elements[i].value.trim();
+					
+						url += "&";
+					}
+				}
+				else
+				{
+					url += formElement.elements[i].name;
+					
+					url += "=";
+					
+					url += formElement.elements[i].value.trim();
+					
+					url += "&";
+				}
+			}
+			
+			url = url.slice(0, -1);
+			
+			console.log(url);
+			
+			var cat = new XMLHttpRequest();
+			
+			cat.open("POST", page, true);
+			/*
+				Sending data through post variable
+			*/
+			cat.setRequestHeader("JSREQ", "1");
+			/*
+				Creating a element in server with JSREQ AS key and 1 as value
+			*/
+			cat.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			
+			cat.onreadystatechange = function () {
+						if(cat.readyState == 4)
+							console.log(formElement.innerHTML = cat.responseText);
+			};
+			
+			
+			cat.send(url);
+			
+		}
+	</script>';
